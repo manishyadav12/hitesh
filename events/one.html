@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h1>Hello World</h1>
+    </div>
+    <div>
+      <button id="start">Start</button>
+      <button id="stop">Stop</button>
+    </div>
+    <script>
+      let startBtn;
+      function startLog() {
+        startBtn = setInterval(function () {
+          console.log("Manish");
+        }, 1000);
+      }
+
+      function stopLog() {
+        clearInterval(startBtn);
+      }
+
+      document.getElementById("start").addEventListener("click", startLog);
+
+      document.getElementById("stop").addEventListener("click", stopLog);
+    </script>
+  </body>
+</html>
